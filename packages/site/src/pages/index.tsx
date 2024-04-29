@@ -115,22 +115,16 @@ const Index = () => {
     console.log(await invokeSnap({ method: 'newAccount' }));
     const params = {
       ring: [
-        '16d7da70ba247a6a40bb310187e8789b80c45fa6dc0061abb8ced49cbe7f887fde4c8b69b71006d02a4bd4f12fb5917a6861f0f86d606ee951754edbaac9ae4b',
-        '21869ca3ae33be3a7327e9a0272203afa72c52a5460ceb9f4a50930531bd926a2c9535b5f71409cf334b639de2d39074ea35c3057857e32ca5487f5d3c68d982',
-        '337d6f577e66a21a7831c087c6836a1bae37086bf431400811ac7c6e96c8ccbb71e0a8d9db6a9093bba7a47a38dce7e3a6df8a531d1b52cd564f512fce2a0132',
-        '36c8ae45992ef5797f42be4748797b966e3be0a4827fb7d0b278444cb9c06b5eb2a34b714f4ce5905c4bec92a4ab3e764226e05acb6b9a3509e5677a19046ec6',
-        '428e020f184b70ca931a91085ac1c233827a41d8516a4b6455e221e637c4de0f732a3d83f31b7fa512cda0ccd72e747559066d005f9f9d1660f238d1b346ae85',
-        '438fbf3776cc24e2535822544f14d7b057d8957c726760180052cda7b8ba6c83678be57a16f69979248530cc00c357af31e2c89e62c18a2f562174b9976d6e5f',
-        '50c1bd64c3087f65f481717ee4a5bdfbba4f060314993f1e15c0db29748b8dc221300f258285169c801c3a977fbb303ccac4a0a8513f166878bd229f8c9b658f',
-        '5b3ab87693201b09da3a89938d0c523624d60562b191eca2b165c7a525e8af76b903237ebdd208284611977388af1a16514f205cfef23ac3cad79a4c2ec79173',
-        '9f88210fdff108c83402e4bb771834474a36ce2529a41402f814ba9958a8e630e9b85f9aa30536be9e9f30559b9c543c45b7b54f1a18143c2b89aa70ee05195d',
-        'cf5645720c7964a860284750c74d923180af03106635dfd578acc8ca7a573b1783593c3629c6efd6ca7eb844dd6de8045df97fa8b2a4172d004a26cb89e0ff21',
-        'de4ec71b5b3195275edb4aa9c30e2e8ed367b6c5cfdfce0a1f33003827b5ac471a604ec8de433e6036683145cd27f64a8a9a34983d4531f632561dab06494369'
+        '030066ba293cc22d0eadbe494e9bd4d6d05c3e09d74dff0e991075de74b2359678',
+        '0316d7da70ba247a6a40bb310187e8789b80c45fa6dc0061abb8ced49cbe7f887f',
+        '0221869ca3ae33be3a7327e9a0272203afa72c52a5460ceb9f4a50930531bd926a'
       ],
-      claim_contract_address: "0x063b0881bcA7D9F0097D5f6300cE765EDc57E3f2",
-      addressToUse: "0x063b0881bcA7D9F0097D5f6300cE765EDc57E3f2"
-    } satisfies { ring: string[], claim_contract_address: string, addressToUse: string};
-    console.log(await invokeSnap({ method: 'LSAG_signature', params: params }));
+      linkabilityFlag: "linkabilityFlag",
+      message: "Hello, World!",
+      addressToUse: "0xC705B28605732a32524C9112df4e6355637Bf809"
+    } satisfies { ring: string[], linkabilityFlag: string, addressToUse: string, message: string};
+    console.log("params: ", params);
+    console.log(await invokeSnap({ method: 'LSAG_Signature', params: params }));
   };
 
   return (
