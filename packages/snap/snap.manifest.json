@@ -1,5 +1,5 @@
 {
-  "version": "0.1.16",
+  "version": "0.1.18",
   "description": "An simple snap implementing LSAG signatures. Check https://www.cypherlab.org/",
   "proposedName": "LSAG Signatures by Cypher Lab",
   "repository": {
@@ -7,7 +7,7 @@
     "url": "https://github.com/Cypher-Laboratory/PrivateAirdropClaim"
   },
   "source": {
-    "shasum": "uEcwKNaGxJWFLG1RY6a2Gpp14Tryr3TW87/PCSHbaEk=",
+    "shasum": "Ijd9fHPfcwvKEgVKqas0l9+xkdeNmVJ1ImTTVdJ8BlE=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",

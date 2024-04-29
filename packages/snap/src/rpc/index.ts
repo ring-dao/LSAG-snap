@@ -52,7 +52,7 @@ export async function LSAG_Signature(ring: string[], message: string, addressToU
   console.log('approval:', approval);
   if (!approval) throw new Error('User denied signing message');
   console.log('enter signing process');
-  const signature = RingSignature.sign(deserializedRing, BigInt(privateKey), message, secp256k1, linkabilityFlag);
+  const signature = RingSignature.sign(deserializedRing, BigInt(privateKey), message, secp256k1, linkabilityFlag, { evmCompatibility: true });
   console.log('signature:', signature.toBase64());
   return JSON.stringify(signature.toBase64());
 }
